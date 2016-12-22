@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:id="@+id/rl_write_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <EditText
+            android:id="@+id/et_write_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:hint="제목을 입력해주세요"
+            android:background="@null"/>
+        <CheckBox
+            android:id="@+id/cb_write_important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중요"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/sv_write_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/rl_write_title"
+        android:background="@color/yellow">
+        <EditText
+            android:id="@+id/et_write_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="글을 작성해주세요"
+            android:background="@null"/>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_write_url"
+        android:orientation="horizontal"
+        android:id="@+id/rl_write_container"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/tv_write_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/temp"
+            android:layout_marginLeft="10dp"
+            android:text="2016/00/00"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/temp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_write_date"/>
+
+        <TextView
+            android:id="@+id/tv_write_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/temp2"
+            android:layout_marginLeft="10dp"
+            android:text="00:00"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_write_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알람"
+        android:layout_above="@+id/et_write_url"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:id="@+id/et_write_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:hint="url을 입력해주세요"/>
+
+
+</RelativeLayout>
